@@ -1,0 +1,13 @@
+place1="Mai Dong"
+place2="441 Nguyen Tam Chinh"
+place3="Cau KUO"
+place4="Cau Mai Dong"
+place5="Quynh mai"
+place6="Cho Mai Dong"
+place7="Cuc kiem dang 1"
+place1 place2 26
+place2 place3 26 30
+place3 place4 26 30
+place4 place5 30
+place5 place6 30
+place6 place7 30
