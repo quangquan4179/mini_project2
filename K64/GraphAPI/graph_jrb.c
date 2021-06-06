@@ -80,7 +80,7 @@ void addEdge(Graph graph, int v1, int v2, weight w)
       addEdge(graph, v2, v1, w);
 }
 
-double getEdgeValue(Graph graph, int v1, int v2)
+weight getEdgeValue(Graph graph, int v1, int v2)
 {
   JRB node, tree;
   node = jrb_find_int(graph.edges, v1);
@@ -91,7 +91,7 @@ double getEdgeValue(Graph graph, int v1, int v2)
   if (node == NULL)
     return INFINITIVE_VALUE;
   else
-    return jval_d(node->val);
+    return (weight)jval_v(node->val);
 }
 
 int hasEdge(Graph graph, int v1, int v2)
@@ -382,10 +382,10 @@ double shortestPath(Graph graph, int start, int stop, int *path, int *numVertice
     for (int i = 0; i < n; i++)
     {
       int v = output[i];
-      double w = getEdgeValue(graph, u, v);
-      if (distance[v] > distance[u] + w)
+      weight w = getEdgeValue(graph, u, v);
+      if (distance[v] > distance[u] + w->val)
       {
-        distance[v] = distance[u] + w;
+        distance[v] = distance[u] + w->val;
         previous[v] = u;
       }
       if (visit[v] == 0)

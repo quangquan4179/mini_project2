@@ -75,8 +75,11 @@ int main(){
           jrb_traverse(node2, g.vertices)
           {
             int id2 = jval_i(node2->key);
+            weight w =getEdgeValue(g, id1, id2);
             if (hasEdge(g, node1->key.i, node2->key.i))
-              printf("%s %s %.1f\n", findName(name_ID, id1), findName(name_ID, id2), getEdgeValue(g, id1, id2));
+            {
+              printf("%s %s %d\n", findName(name_ID, id1), findName(name_ID, id2), w->val);
+            }
           }
         }
       }

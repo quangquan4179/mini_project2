@@ -34,7 +34,7 @@ void *getVertex(Graph graph, int id);
 int getNumofV(Graph graph);
 
 void addEdge(Graph graph, int v1, int v2, weight w);
-double getEdgeValue(Graph graph, int v1, int v2);
+weight getEdgeValue(Graph graph, int v1, int v2);
 int hasEdge(Graph graph, int v1, int v2);
 
 int indegree(Graph graph, int v, int *output);
